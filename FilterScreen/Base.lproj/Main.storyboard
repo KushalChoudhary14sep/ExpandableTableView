@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0g-81-UH5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FilterVC-->
+        <scene sceneID="T36-eE-JFQ">
+            <objects>
+                <viewController storyboardIdentifier="FilterVC" id="Q0g-81-UH5" customClass="FilterVC" customModule="FilterScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIf-oI-7Tk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-oK-8Wn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uep-NQ-9tb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcF-jg-PUN" customClass="HeaderView" customModule="FilterScreen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="100" constant="370" id="med-9O-Vkd"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-d8-hu7" customClass="HeaderView" customModule="FilterScreen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="370" width="414" height="370"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="100" constant="370" id="Ha5-hr-0Md"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="AcF-jg-PUN" firstAttribute="top" secondItem="uep-NQ-9tb" secondAttribute="top" id="IIv-1X-82c"/>
+                                            <constraint firstAttribute="trailing" secondItem="AcF-jg-PUN" secondAttribute="trailing" id="MeS-Wm-mMR"/>
+                                            <constraint firstItem="Kgz-d8-hu7" firstAttribute="top" secondItem="AcF-jg-PUN" secondAttribute="bottom" id="X1C-x0-rvs"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kgz-d8-hu7" secondAttribute="trailing" id="l4q-HX-Whe"/>
+                                            <constraint firstItem="AcF-jg-PUN" firstAttribute="leading" secondItem="uep-NQ-9tb" secondAttribute="leading" id="rkG-w6-GdE"/>
+                                            <constraint firstItem="Kgz-d8-hu7" firstAttribute="leading" secondItem="uep-NQ-9tb" secondAttribute="leading" id="z24-do-ERj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uep-NQ-9tb" firstAttribute="leading" secondItem="J7H-oK-8Wn" secondAttribute="leading" id="Md2-GF-S0A"/>
+                                    <constraint firstItem="uep-NQ-9tb" firstAttribute="top" secondItem="J7H-oK-8Wn" secondAttribute="top" id="d4L-JK-kqj"/>
+                                    <constraint firstAttribute="trailing" secondItem="uep-NQ-9tb" secondAttribute="trailing" id="dJD-L0-YUC"/>
+                                    <constraint firstAttribute="bottom" secondItem="uep-NQ-9tb" secondAttribute="bottom" id="ndJ-gF-TGf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D6N-nb-aiQ"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="uep-NQ-9tb" firstAttribute="height" secondItem="eIf-oI-7Tk" secondAttribute="height" priority="100" id="4dP-WK-G1p"/>
+                            <constraint firstItem="D6N-nb-aiQ" firstAttribute="trailing" secondItem="J7H-oK-8Wn" secondAttribute="trailing" id="CPe-zY-eXs"/>
+                            <constraint firstItem="uep-NQ-9tb" firstAttribute="width" secondItem="eIf-oI-7Tk" secondAttribute="width" id="PJC-tE-Cra"/>
+                            <constraint firstItem="J7H-oK-8Wn" firstAttribute="leading" secondItem="D6N-nb-aiQ" secondAttribute="leading" id="ahu-Qd-475"/>
+                            <constraint firstItem="J7H-oK-8Wn" firstAttribute="top" secondItem="D6N-nb-aiQ" secondAttribute="top" id="s0N-k8-0gI"/>
+                            <constraint firstItem="D6N-nb-aiQ" firstAttribute="bottom" secondItem="J7H-oK-8Wn" secondAttribute="bottom" id="ypN-In-IYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterView" destination="AcF-jg-PUN" id="LkX-bh-7up"/>
+                        <outlet property="sortView" destination="Kgz-d8-hu7" id="Gsk-aq-BEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3R-SC-tII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="-43"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
